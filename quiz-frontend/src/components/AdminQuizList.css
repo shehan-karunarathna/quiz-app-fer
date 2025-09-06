@@ -1,0 +1,78 @@
+.admin-quiz-list {
+  color: white;
+  padding: 20px;
+  background-color: #1a1a1a; /* optional for better contrast */
+}
+
+.admin-quiz-list h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.quiz-table th,
+.quiz-table td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+
+.quiz-table th {
+  background-color: #333;
+}
+
+.analyze-btn,
+.delete-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.analyze-btn:hover,
+.delete-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.loading,
+.error {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.analyze-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.analyze-btn:hover {
+  background-color: darkgreen;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

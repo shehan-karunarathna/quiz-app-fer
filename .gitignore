@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+venv/
+.env
+*.joblib
+*.pickle
+
+# Node / React
+node_modules/
+build/
+dist/
+.env.local
+.env.development
+.env.production
+
+# System
+.DS_Store
+Thumbs.db

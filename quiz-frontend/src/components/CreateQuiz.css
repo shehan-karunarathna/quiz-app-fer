@@ -1,0 +1,72 @@
+/* Shared glass-morphic form styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* { font-family: 'Inter', sans-serif; box-sizing: border-box; }
+
+.create-quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 92vh;
+  background: #f0f2f5;
+  padding: 1rem;
+}
+
+.create-quiz-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: opacity 0.3s;
+}
+
+.create-quiz-card.loading { opacity: 0.7; pointer-events: none; }
+
+.create-quiz-card h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.create-quiz-card label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.create-quiz-card input,
+.create-quiz-card select,
+.create-quiz-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.options-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.opt-group label { margin-bottom: 0.25rem; }
+
+.create-quiz-card button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.create-quiz-card button:hover {
+  background: #5848c2;
+}

@@ -1,0 +1,141 @@
+/* CompletionScreen.css */
+
+/* 1. Global reset + font (if not already set) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 2. Canvas background */
+.completion-screen {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+/* 3. Card wrapper */
+.completion-screen > h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. Summary box */
+.results-summary {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.results-summary p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* 5. Questions review */
+.questions-review {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.questions-review h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* 6. Each question result */
+.question-result {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.question-result.correct {
+  border-left: 4px solid #38a169; /* green */
+}
+.question-result.incorrect {
+  border-left: 4px solid #e53e3e; /* red */
+}
+.question-result h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+/* 7. Options container */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.option {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  position: relative;
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.option.correct-answer {
+  background: rgba(56,161,105,0.8); /* green */
+  color: #fff;
+}
+.option.incorrect-selection {
+  background: rgba(229,62,62,0.8); /* red */
+  color: #fff;
+}
+.option.user-selection {
+  outline: 2px dashed #ffd33d; /* gold */
+}
+.option .correct-marker,
+.option .incorrect-marker {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+/* 8. Correct answer text for incorrect questions */
+.correct-answer-text {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #ffd33d;
+}
+
+/* 9. Back to Home button */
+.home-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.home-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* 10. Responsive tweaks */
+@media (max-width: 600px) {
+  .option {
+    flex: 1 1 100%;
+  }
+  .results-summary, .questions-review {
+    padding: 0 1rem;
+  }
+}

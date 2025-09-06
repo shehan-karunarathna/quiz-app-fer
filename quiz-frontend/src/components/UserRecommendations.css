@@ -1,0 +1,111 @@
+.recommendation-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Left Image */
+.card-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Right Content */
+.card-content {
+  flex: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge-label {
+  background-color: #4a90e2;
+}
+
+.badge-conf {
+  background-color: #16a34a;
+}
+
+.quiz-id {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.stress-score {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #374151;
+}
+
+/* Recommendation list inside card */
+.recommendations-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.recommendations-list li {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+.recommendations-scroll-container {
+  max-height: 400px; /* adjust to fit your layout */
+  overflow-y: auto;
+  padding-right: 6px; /* space for scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc transparent;
+}
+
+/* WebKit scrollbar styling */
+.recommendations-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recommendations-scroll-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+.recommendations-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}

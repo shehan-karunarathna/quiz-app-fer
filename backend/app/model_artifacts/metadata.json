@@ -1,0 +1,18 @@
+{
+  "labels": [
+    "BALANCED_IMPROVEMENT_NEEDED",
+    "HIGH_CONTENT_GAP",
+    "LOW_STRESS_GOOD_PROGRESS"
+  ],
+  "num_features": [
+    "avg_stress",
+    "wrong_ratio",
+    "avg_time",
+    "time_over_15_ratio",
+    "neg_emotion_ratio"
+  ],
+  "cat_features": [
+    "dominant_emotion"
+  ],
+  "version": "1.0.0"
+}
