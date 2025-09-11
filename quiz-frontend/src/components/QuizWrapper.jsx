@@ -14,7 +14,7 @@ const QuizWrapper = ({ userId }) => {
   useEffect(() => {
     axios
       // use the plural “quizzes” if that’s what your backend exposes
-      .get(`http://localhost:8000/api/quizzes/${quizId}`)
+      .get(`/api/quizzes/${quizId}`)
       .then(res => {
         const quizData = res.data;
         if (!Array.isArray(quizData.questions)) {
@@ -45,3 +45,4 @@ return <Quiz questions={questions} userId={userId} quizId={quizId} />;
 };
 
 export default QuizWrapper;
+
