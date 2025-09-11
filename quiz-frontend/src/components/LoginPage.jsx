@@ -14,7 +14,7 @@ function LoginPage({ setUser }) {
     setLoading(true);
     try {
       const res = await axios.post(
-        'http://localhost:8000/api/auth/login',
+        '/api/auth/login',
         new URLSearchParams({ username, password })
       );
       setUser(res.data);
@@ -65,3 +65,4 @@ function LoginPage({ setUser }) {
 }
 
 export default LoginPage;
+
