@@ -8,7 +8,7 @@ const AdminQuizList = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/quizzes')
+    axios.get('/api/quizzes')
       .then(res => {
         setQuizzes(res.data);
         setError(null);
@@ -24,7 +24,7 @@ const AdminQuizList = () => {
 
   function handleDelete(quizId) {
     if (window.confirm(`Are you sure you want to delete Quiz #${quizId}?`)) {
-      axios.delete(`http://localhost:8000/api/quizzes/${quizId}`)
+      axios.delete(`/api/quizzes/${quizId}`)
         .then(() => {
           setQuizzes(quizzes.filter(q => q.quizId !== quizId));
         })
@@ -37,7 +37,7 @@ const AdminQuizList = () => {
 
   function handleAnalyze(quizId) {
   
-    axios.post(`http://localhost:8000/api/quizzes/analyze/${quizId}`)
+    axios.post(`/api/quizzes/analyze/${quizId}`)
 
       .then(res => {
         alert("✅ Analysis complete!");
@@ -97,3 +97,4 @@ const AdminQuizList = () => {
 };
 
 export default AdminQuizList;
+
