@@ -19,7 +19,7 @@ const AdminLogin = ({ setLecturer }) => {
       formData.append('password', password);
 
       const res = await axios.post(
-        'http://localhost:8000/api/admin/login',
+        '/api/admin/login',
         formData,
         { withCredentials: true }
       );
@@ -74,3 +74,4 @@ const AdminLogin = ({ setLecturer }) => {
 };
 
 export default AdminLogin;
+
