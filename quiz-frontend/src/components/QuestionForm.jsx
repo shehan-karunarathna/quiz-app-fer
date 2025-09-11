@@ -14,7 +14,7 @@ export default function QuestionForm() {
   const [isSubmitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/quizzes/${quizId}`)
+    axios.get(`/api/quizzes/${quizId}`)
       .then(r => setQuiz(r.data))
       .catch(() => alert('Quiz not found') && navigate('/admin'));
   }, [quizId, navigate]);
@@ -120,3 +120,4 @@ export default function QuestionForm() {
     </div>
   );
 }
+
