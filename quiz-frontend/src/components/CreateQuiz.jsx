@@ -14,7 +14,7 @@ export default function CreateQuiz() {
     setLoading(true);
     try {
       const res = // after
-await axios.post('http://localhost:8000/api/quizzes/', { title, question_count: count });
+await axios.post('/api/quizzes/', { title, question_count: count });
 
       const { quizId } = res.data;
       alert(`Quiz #${quizId} created! Now add your ${count} questions.`);
@@ -60,3 +60,4 @@ await axios.post('http://localhost:8000/api/quizzes/', { title, question_count: 
     </div>
   );
 }
+
