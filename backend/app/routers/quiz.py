@@ -33,9 +33,9 @@ class QuestionOut(BaseModel):
 class QuizOut(BaseModel):
     quizId: int
     title: str
-    question_count: int   # ✅ Return it
     createdAt: datetime
     questions: List[QuestionOut]
+    question_count: Optional[int] = None
 
 
 # ——— 1) Create a new quiz ———
@@ -168,3 +168,4 @@ def get_user_results(user_id: str, db: Database = Depends(get_db)):
         })
 
     return results
+
