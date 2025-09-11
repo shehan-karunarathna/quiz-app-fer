@@ -57,7 +57,7 @@ const Quiz = ({ questions,userId ,quizId  }) => {
       formData.append('time_taken', timeTaken);
 
       const res = await axios.post(
-        'http://localhost:8000/api/quiz/submit-answer',
+        '/api/quiz/submit-answer',
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
@@ -111,3 +111,4 @@ const Quiz = ({ questions,userId ,quizId  }) => {
 };
 
 export default Quiz;
+
