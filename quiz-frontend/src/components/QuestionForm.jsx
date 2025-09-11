@@ -26,7 +26,7 @@ export default function QuestionForm() {
     setSubmitting(true);
     try {
       await axios.post(
-        `http://localhost:8000/api/quizzes/${quizId}/questions`,
+        `/api/quizzes/${quizId}/questions`,
         {
           text: form.text,
           options: { A: form.A, B: form.B, C: form.C, D: form.D },
@@ -120,4 +120,5 @@ export default function QuestionForm() {
     </div>
   );
 }
+
 
