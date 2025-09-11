@@ -12,7 +12,7 @@ const Quizzes = ({ userId }) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:8000/api/quizzes')
+      .get('/api/quizzes')
       .then(res => {
         setQuizzes(res.data);
         setError(null);
@@ -64,3 +64,4 @@ const Quizzes = ({ userId }) => {
 };
 
 export default Quizzes;
+
